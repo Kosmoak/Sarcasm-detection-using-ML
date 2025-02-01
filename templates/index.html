@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Sarcasm Detection</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: Helvetica, Sans-serif;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .definition {
+            font-size: 18px;
+            color: #555;
+            text-align: center;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+        .form-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+        }
+        .form-section h2 {
+            color: #F08080;
+        }
+        .form-group textarea {
+            height: auto;
+            resize: vertical;
+        }
+        button {
+            width: 100%;
+        }
+        .file-upload {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .file-upload button {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sarcasm Detection</h1>
+
+    <!-- Definition of Sarcasm -->
+    <div class="definition">
+        "Sarcasm is a form of verbal irony where someone says the opposite of what they mean, often with a biting or humorous tone."
+    </div>
+
+    <!-- Text Input Form -->
+    <div class="form-section">
+        <h2>Single Input Detection</h2>
+        <form action="/predict" method="POST" class="form-group">
+            <textarea name="user_input" placeholder="Enter a sentence..." class="form-control mb-3"></textarea>
+            <button type="submit" class="btn btn-primary">Detect Sarcasm</button>
+        </form>
+        {% if prediction %}
+        <div class="alert alert-info mt-3">
+            <strong>Prediction:</strong> {{ prediction }}
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- File Upload Form -->
+    <div class="form-section">
+        <h2>Batch Detection</h2>
+        <form action="/upload" method="POST" enctype="multipart/form-data" class="form-group">
+            <div class="file-upload">
+                <input type="file" name="file" class="form-control-file">
+                <button type="submit" class="btn btn-success">Upload File</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
