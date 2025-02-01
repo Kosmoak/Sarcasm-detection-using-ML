@@ -1,10 +1,10 @@
-Sarcasm Detection Using Machine Learning
+Sarcasm Detection Using Machine Learning 🤖
 
 Project Overview
 
 This project aims to build an intelligent sarcasm detection system using machine learning techniques. Given the complexity of sarcasm, where textual meaning often contradicts the speaker’s intent, the system classifies text inputs as sarcastic or non-sarcastic. It has practical applications in sentiment analysis, content moderation, and natural language processing tasks.
 
-Key Features
+Key Features 🔑
 
 
 Single Sentence Detection:
@@ -19,7 +19,7 @@ Built using Flask, the web interface allows users to input text or upload files 
 Model Accuracy:
 Achieved 83% accuracy with balanced precision, recall, and F1-scores.
 
-Technologies Used
+Technologies Used 📡
 
 
 Machine Learning: Logistic Regression for text classification
@@ -32,7 +32,8 @@ Backend: Flask for model deployment and API integration
 
 Frontend: Bootstrap for a responsive user interface
 
-Getting Started
+
+Getting Started 🎬
 
 
 Clone the repository:
@@ -46,7 +47,8 @@ python app.py
 
 Access the interface at http://localhost:5000/
 
-How It Works
+
+How It Works ⚙️
 
 Input text or upload a file
 
@@ -56,7 +58,7 @@ Prediction: The system returns sarcasm probabilities
 
 Output: Clear and visually appealing results displayed on the interface
 
-Future Scope
+Future Scope 🔮
 
 * Incorporate advanced models like transformers for more nuanced sarcasm detection
 * Expand the dataset to enhance generalization
